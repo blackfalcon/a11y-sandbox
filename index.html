@@ -1,0 +1,36 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>a11y sandbox</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+
+        <p>
+            <a href="http://www.apple.com">Active</a>
+
+            <!-- voice over will announced DIMMED link, in tab order -->
+            <!-- totally ignored if CSS is added to hide -->
+            <a aria-disabled="true" href="http://www.apple.com">Aria disabled</a>
+
+            <button>Active</button>
+
+            <!-- voice over will announce DIMMED button, in tab order -->
+            <!-- totally ignored if CSS is added to hide -->
+            <button aria-disabled="true">Aria disabled</button>
+
+            <!-- totally ignored from voice over, ignored from tab order -->
+            <!-- totally ignored regardless of CSS display type -->
+            <button disabled="true">HTML disabled</button>
+        </p>
+
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
